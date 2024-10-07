@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "5792243c-44cb-4ca5-a159-eec3fa02cdaa",
+		"name": "CustomerAccountAPI Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9436090",
+		"_collection_link": "https://lunar-eclipse-761053.postman.co/workspace/Team-Workspace~4c33cdca-8dd6-4d97-8e73-f93f4cc8a9a3/collection/9436090-5792243c-44cb-4ca5-a159-eec3fa02cdaa?action=share&source=collection_link&creator=9436090"
+	},
+	"item": [
+		{
+			"name": "GetAccountDetails",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/v1/customer/account/getDetails?accountNumber=111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"account",
+						"getDetails"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferAmount",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senderAccountNo\":\"11111111111\",\r\n    \"receiverAccountNo\":\"1111111112\",\r\n    \"amount\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/v1/customer/account/transferAmount"
+			},
+			"response": []
+		}
+	]
+}

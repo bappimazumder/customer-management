@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: customer-management
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer_management
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: false
+    show-sql: true
